@@ -1,4 +1,4 @@
-@ApiCreatePdf_HostAddress = http://localhost:5022
+@ApiCreatePdf_HostAddress = https://localhost:44394
 
 GET {{ApiCreatePdf_HostAddress}}/weatherforecast/
 Accept: application/json
