@@ -4,15 +4,13 @@ namespace ApiCreatePdf.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class DownloadController : ControllerBase
+    public class DownloadController(DocumentService _documentService) : ControllerBase
     {
-
         [Route("pdf/{id}")]
         [HttpGet]
-        public FileStreamResult Download(int id)
+        public FileStreamResult Download(string id)
         {
-            var path = "test\\test.pdf";
-            var stream = new FileStream(path, FileMode.Open);
+            var stream = _documentService.GeneratePdf(id);
             return File(stream, "application/pdf");
         }
     }
