@@ -19,7 +19,7 @@ namespace ApiCreatePdf.Controllers
         public FileStreamResult DownloadDocx(string id)
         {
             var stream = _documentService.GenerateDocx(id);
-            return File(stream, "application/docx");
+            return File(stream, "application/vnd.openxmlformats-officedocument.wordprocessingml.document");
         }
     }
 }
