@@ -8,10 +8,18 @@ namespace ApiCreatePdf.Controllers
     {
         [Route("pdf/{id}")]
         [HttpGet]
-        public FileStreamResult Download(string id)
+        public FileStreamResult DownloadPdf(string id)
         {
             var stream = _documentService.GeneratePdf(id);
             return File(stream, "application/pdf");
+        }
+
+        [Route("docx/{id}")]
+        [HttpGet]
+        public FileStreamResult DownloadDocx(string id)
+        {
+            var stream = _documentService.GenerateDocx(id);
+            return File(stream, "application/docx");
         }
     }
 }

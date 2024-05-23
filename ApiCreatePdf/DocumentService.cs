@@ -6,10 +6,30 @@ public class DocumentService
 {
     public Stream GeneratePdf(string id)
     {
-        var documentData = GetDocumentData(id);
+        var documentData = GetDocumentData(id, SaveOptions.PdfDefault);
 
         var pdf = new MemoryStream();
+        var document = CreateDocument(documentData);
 
+        document.Save(pdf, SaveOptions.PdfDefault);
+
+        return pdf;
+    }
+
+    public Stream GenerateDocx(string id)
+    {
+        var documentData = GetDocumentData(id, SaveOptions.DocxDefault);
+
+        var docx = new MemoryStream();
+        var document = CreateDocument(documentData);
+
+        document.Save(docx, SaveOptions.DocxDefault);
+
+        return docx;
+    }
+
+    private static DocumentModel CreateDocument(DocumentData documentData)
+    {
         // If using the Professional version, put your serial key below.
         ComponentInfo.SetLicense("FREE-LIMITED-KEY");
 
@@ -23,17 +43,14 @@ public class DocumentService
 
         var run = new Run(document, documentData.MainContentText);
         paragraph.Inlines.Add(run);
-
-        document.Save(pdf, SaveOptions.PdfDefault);
-
-        return pdf;
+        return document;
     }
 
-    private DocumentData GetDocumentData(string id)
+    private DocumentData GetDocumentData(string id, SaveOptions docType)
     {
         return new DocumentData
         {
-            MainContentText = $"PDF created for id: {id}"
+            MainContentText = $"{docType.ContentType} created for id: {id}"
         };
     }
 }
