@@ -65,7 +65,7 @@ public class DocumentService
         return document;
     }
 
-    private DocumentData GetDocumentData(string id, SaveOptions docType)
+    private static DocumentData GetDocumentData(string id, SaveOptions docType)
     {
         return new DocumentData
         {
