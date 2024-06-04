@@ -1,4 +1,4 @@
-# Create PDF in ASP.NET Core API
+# Create PDFs or docx in ASP.NET Core API
 
 [![.NET](https://github.com/damienbod/AspNetCoreCreatePdf/actions/workflows/dotnet.yml/badge.svg)](https://github.com/damienbod/AspNetCoreCreatePdf/actions/workflows/dotnet.yml)
 
