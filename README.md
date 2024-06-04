@@ -2,6 +2,8 @@
 
 [![.NET](https://github.com/damienbod/AspNetCoreCreatePdf/actions/workflows/dotnet.yml/badge.svg)](https://github.com/damienbod/AspNetCoreCreatePdf/actions/workflows/dotnet.yml)
 
+Add **HarfBuzzSharp.NativeAssets.Linux** for linux deployments
+
 ## Links
 
 https://www.gemboxsoftware.com/document

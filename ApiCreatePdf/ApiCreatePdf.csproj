@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="GemBox.Document" Version="35.0.1749" />
+    <PackageReference Include="HarfBuzzSharp.NativeAssets.Linux" Version="7.3.0.2" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
