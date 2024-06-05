@@ -2,6 +2,8 @@
 
 [![.NET](https://github.com/damienbod/AspNetCoreCreatePdf/actions/workflows/dotnet.yml/badge.svg)](https://github.com/damienbod/AspNetCoreCreatePdf/actions/workflows/dotnet.yml)
 
+https://damienbod.com/2024/06/05/creating-and-downloading-a-pdf-or-docx-in-asp-net-core/
+
 > Add **HarfBuzzSharp.NativeAssets.Linux** for linux deployments
 
 ## Links
