@@ -4,6 +4,10 @@
 
 > Add **HarfBuzzSharp.NativeAssets.Linux** for linux deployments
 
+## History
+
+2024-11-03 Updated packages
+
 ## Links
 
 https://www.gemboxsoftware.com/document
